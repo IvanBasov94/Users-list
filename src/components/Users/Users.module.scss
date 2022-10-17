@@ -1,0 +1,102 @@
+.search {
+   position: relative;
+
+   input {
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 15px;
+      border-radius: 15px;
+      width: 100%;
+      font-size: 16px;
+      padding-left: 50px;
+   }
+
+   svg {
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      top: 17px;
+      left: 20px;
+      opacity: 0.3;
+   }
+}
+
+.skeleton__list {
+   height: calc(100% - 130px);
+   margin-top: 30px;
+
+   svg {
+       margin-bottom: 15px;
+   }
+}
+
+.users__list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   overflow: auto;
+   height: calc(100% - 130px);
+   margin-top: 30px;
+
+   li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      &>div {
+         display: flex;
+      }
+
+      h3 {
+         margin: 0;
+         font-weight: 900;
+         font-family: 'Merriweather', serif;
+         margin-left: 15px;
+         margin-top: 5px;
+         margin-left: 0;
+         color: #182170;
+      }
+
+      p {
+         display: flex;
+         align-items: center;
+         font-size: 14px;
+         margin: 0;
+         color: rgba(0, 0, 0, 0.5);
+         margin-top: 3px;
+
+         svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 4px;
+
+            path {
+               fill: rgba(0, 0, 0, 0.2);
+            }
+         }
+      }
+   }
+}
+
+.send__invite__btn {
+   background-color: rgb(251, 80, 0);
+   padding: 16px 15px;
+   border-radius: 15px;
+   font-size: 16px;
+   color: #fff;
+   width: 100%;
+   border: 0;
+   outline: none;
+   box-shadow: 0 7px 10px rgba(251, 80, 0, 0.4);
+   cursor: pointer;
+   transition: all 0.1s ease-in-out;
+
+   &:hover {
+      background-color: rgb(255, 97, 24);
+   }
+
+   &:active {
+      transform: translateY(2px);
+      box-shadow: none;
+   }
+}
