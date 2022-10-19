@@ -1,16 +1,23 @@
 import './index.scss';
 import Success from './components/Success';
 import Users from './components/Users';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
+type User = {
+   id: number,
+   email: string,
+   first_name: string,
+   last_name: string,
+   avatar: string,
+};
 
 const App = () => {
 
-    const [users, setUsers] = useState([]);
-    const [invites, setInvites] = useState([]);
-    const [isLoading, setLoading] = useState(true);
-    const [success, setSuccess] = useState(false);
-    const [searchValue, setSearchValue] = useState('');
+    const [users, setUsers] = useState<User[]>([]);
+    const [invites, setInvites] = useState<number[]>([]);
+    const [isLoading, setLoading] = useState<boolean>(true);
+    const [success, setSuccess] = useState<boolean>(false);
+    const [searchValue, setSearchValue] = useState<string>('');
 
 
     useEffect(() => {
@@ -25,11 +32,11 @@ const App = () => {
     }, []);
 
 
-    const onChangeSearchValue = (event) => {
+    const onChangeSearchValue = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchValue(event.target.value);
     };
 
-    const onClickInvite = (id) => {
+    const onClickInvite = (id: number) => {
         if (invites.includes(id)) {
             setInvites(prev => prev.filter(_id => _id !== id))
         } else {

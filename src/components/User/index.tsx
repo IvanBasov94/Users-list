@@ -4,8 +4,17 @@ import styles from './User.module.scss';
 import plusSvg from '../../assets/img/plus.svg';
 import minusSvg from '../../assets/img/minus.svg';
 
+interface UserProps {
+   id: number,
+   email: string,
+   first_name: string,
+   last_name: string,
+   avatar: string,
+   onClickInvite: (id: number) => void,
+   isInvited: boolean,
+};
 
-const User = ({
+const User: React.FC<UserProps> = ({
    id,
    email,
    first_name,
@@ -17,10 +26,10 @@ const User = ({
    return (
       <li>
          <div>
-            <img 
-               className={styles.avatar} 
-               src={avatar} 
-               alt="User" 
+            <img
+               className={styles.avatar}
+               src={avatar}
+               alt="User"
             />
             <div>
                <h3>{first_name} {last_name}</h3>

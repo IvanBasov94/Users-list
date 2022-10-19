@@ -4,7 +4,11 @@ import styles from './Success.module.scss';
 
 import successSvg from '../../assets/img/success.svg';
 
-const Success = ({ count }) => {
+type SuccessProps = {
+   count: number,
+};
+
+const Success: React.FC<SuccessProps> = ({ count }) => {
    return (
       <div className={styles.success__block}>
          <img src={successSvg} alt="Success" />

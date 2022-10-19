@@ -1,10 +1,29 @@
 import React from 'react';
+import { isTemplateSpan } from 'typescript';
 import Skeleton from '../Skeleton';
 import User from '../User';
 
 import styles from "./Users.module.scss";
 
-const Users = ({
+type Items = {
+   id: number,
+   email: string,
+   first_name: string,
+   last_name: string,
+   avatar: string,
+};
+
+interface UsersProps {
+   items: Items[],
+   isLoading: boolean,
+   searchValue: string,
+   onChangeSearchValue: any,
+   invites: number[],
+   onClickInvite: (id: number) => void,
+   onClickSendInvites: () => void
+}
+
+const Users:React.FC<UsersProps> = ({
    items,
    isLoading,
    searchValue,
