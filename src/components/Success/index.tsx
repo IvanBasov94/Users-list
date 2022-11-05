@@ -10,13 +10,13 @@ type SuccessProps = {
 
 const Success: React.FC<SuccessProps> = ({ count }) => {
    return (
-      <div className={styles.success__block}>
+      <div className={styles.block}>
          <img src={successSvg} alt="Success" />
          <h3>Успешно!</h3>
          <p>Всем {count} пользователям отправлено приглашение.</p>
          <button
             onClick={() => window.location.reload()}
-            className={styles.send__invite__btn}
+            className={styles.sendInviteBtn}
          >
             Назад
          </button>

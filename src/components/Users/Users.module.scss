@@ -20,7 +20,7 @@
    }
 }
 
-.skeleton__list {
+.skeletonList {
    height: calc(100% - 130px);
    margin-top: 30px;
 
@@ -29,7 +29,7 @@
    }
 }
 
-.users__list {
+.list {
    list-style: none;
    padding: 0;
    margin: 0;
@@ -78,7 +78,7 @@
    }
 }
 
-.send__invite__btn {
+.sendInviteBtn {
    background-color: rgb(251, 80, 0);
    padding: 16px 15px;
    border-radius: 15px;

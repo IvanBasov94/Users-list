@@ -46,13 +46,13 @@ const Users:React.FC<UsersProps> = ({
             />
          </div>
          {isLoading ? (
-            <div className={styles.skeleton__list}>
+            <div className={styles.skeletonList}>
                <Skeleton />
                <Skeleton />
                <Skeleton />
             </div>
          ) : (
-            <ul className={styles.users__list}>
+            <ul className={styles.list}>
                {items.filter(obj => {
                   const fullName = (obj.first_name + obj.last_name).toLowerCase();
 
@@ -75,7 +75,7 @@ const Users:React.FC<UsersProps> = ({
             invites.length > 0 && (
                <button
                   onClick={onClickSendInvites}
-                  className={styles.send__invite__btn}
+                  className={styles.sendInviteBtn}
                >
                   Отправить приглашение
                </button>
